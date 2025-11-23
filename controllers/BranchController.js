@@ -35,8 +35,7 @@ const createBranch = async (req, res) => {
 
 const setFeaturedBranches = async (req, res) => {
   try {
-    const { branchIds } = req.body;
-
+    const { branchIds } = req.body;                  
     if (!Array.isArray(branchIds) || branchIds.length !== 3) {
       return res.status(400).json({ message: 'Please select exactly 3 branches.' });
     }

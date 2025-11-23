@@ -11,9 +11,10 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware - Updated CORS to allow Vite port 5173 (your current frontend)
+
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:5173'], // Both CRA and Vite
+  origin: ["https://institute-frontend-t1z5.vercel.app",'http://localhost:3000', 'http://localhost:5173'],
+   methods: ["GET", "POST", "DELETE", "PUT"],
   credentials: true
 }));
 app.use(express.json()); 
